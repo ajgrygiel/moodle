@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adam Grygiel Resume</title>
+
+    <!--
+            Adam Grygiel Resume
+            Filename: results.html
+            Author: Adam Grygiel
+        -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Page showing what information was submitted in webform.">
+
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="icon" sizes="192x192" href="images/Final-Project.jpg">
+
+</head>
+
+<body>
+    <div class="header-nav-container">
+
+        <head>
+            <title>Adam Grygiel Resume</title>
+
+            <!--
+            Adam Grygiel Resume
+            Filename: aboutme.html
+            Author: Adam Grygiel
+        -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width">
+            <!--Add Script Source here after copying the file over-->
+            <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="styles.min.css">
+            <link rel="icon" sizes="192x192" href="images/Final-Project.jpg">
+
+        </head>
+
+
+        <div class="header-nav-container">
+            <p class="skipnavigation"><a href="contentstart">Skip Navigation</a></p>
+            <header>
+                <h1>Adam Edward Grygiel Jr.</h1>
+                <div>
+                    <img src="images/Final-Project.jpg" width="216" height="146" alt="">
+                    <!--Add img source here of myself-->
+                </div>
+            </header>
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <article id="contentstart">
+            <h2>Your form has been submitted</h2>
+            <h3>You entered the following data:</h3>
+
+            <script>
+                var formData = location.search;
+                formData = formData.substring(1, formData.length);
+                while (formData.indexOf("+") !== -1) {
+                    formData = formData.replace("+", " ");
+                }
+                formData = decodeURIComponent(formData);
+                var formArray = formData.split("&");
+                for (var i = 0; i < formArray.length; i = i + 1) {
+                    document.write("<p>" + formArray[i] + "</p>");
+                }
+            </script>
+        </article>
+        <article>
+            <fieldset class="submitbutton2">
+                <input type="submit" id="submit" value="Submit Request">
+            </fieldset>
+            </h2>
+        </article>
+        <script src="script.js"></script>
+</body>
+
+</html>
